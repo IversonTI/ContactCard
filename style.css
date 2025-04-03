@@ -66,14 +66,14 @@ body {
  width: 100%;
 }
 .profilepic{
-    width: 102.10px;
-    height: 102px;
+    width: 103.10px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 20px;
     overflow: hidden;
     align-items: center;
-    display: flex;
+    display: block;
     transition: 0.5s;
     scale: 3px;
 }
