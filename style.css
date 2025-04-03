@@ -1,0 +1,162 @@
+:root {
+  --primary--color: #53687e;
+  --secondary--color: #5941A9;
+  --glass: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #f5dddd;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.3) 50%
+    ),
+    url(backround.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: "segoe UI", sans-serif;
+}
+
+.text--color{
+    color: var(--secondary--color);
+    font-weight: 800;
+}
+
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  animation: float 8s ease-in-out infinite;
+}
+
+.content {
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+}
+
+.img--container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ width: 100%;
+}
+.profilepic{
+    width: 102.10px;
+    height: 102px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    transition: 0.5s;
+    scale: 3px;
+}
+.avatar {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.profilepic:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+h2 {
+  color: #f5dddd;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #f5dddd;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  background: var(--glass);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #f5dddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background: linear-gradient(
+    45deg,
+    var(--primary--color),
+    var(--secondary--color)
+  );
+
+  transform: translateY(-5px);
+}
+
+button {
+  padding: 12px 30px;
+  background: linear-gradient(
+    45deg,
+    var(--primary--color),
+    var(--secondary--color)
+  );
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  letter-spacing: 4px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
+
+  25% {
+    transform: translateY(-20px) rotateX(5deg) rotateY(5deg);
+  }
+
+  75% {
+    transform: translateY(20px) rotateX(-5deg) rotateY(-5deg);
+  }
+}
